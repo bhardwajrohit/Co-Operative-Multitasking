@@ -1,4 +1,5 @@
 #include <stdio.h>
+//Main file
 #include <string.h>
 #include "stm32f3xx_hal.h"
 #include "stm32f3_discovery.h"
@@ -27,13 +28,12 @@ int main(int argc, char **argv)
 
   /* Start the Watchdog */
 
-
   TerminalInit();  /* Initialize UART and USB */
   /* Configure the LEDs... */
   for(i=0; i<numLEDs; i++) {
     BSP_LED_Init(LEDs[i]);
   }
-
+	
   /* Initialize the pushbutton */
   BSP_PB_Init(BUTTON_USER, BUTTON_MODE_GPIO);
 
@@ -58,7 +58,6 @@ int main(int argc, char **argv)
   }
   return 0;
 }
-
 
 /**
   * @brief  System Clock Configuration
