@@ -3,7 +3,6 @@
 #
 # openocd -f board/stm32f3discovery.cfg -c "init" -c "halt" -c "flash write_image erase simple_monitor.elf" -c "reset run" -c shutdown
 
-
 # C source files for the project
 PROJ_NAME = simple_monitor
 SRCS = main.c
@@ -11,10 +10,6 @@ SRCS = main.c
 # C to assembly language templates
 SRCS += mycode.s mytest.c
 
-# lAB 1 FILES
-SRCS += simple_task.c
-
-# lab2
 SRCS += task_executive1.c task_test1.c
 
 # Simple Monitor sources
